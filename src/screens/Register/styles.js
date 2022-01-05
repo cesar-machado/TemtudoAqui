@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#000',
   },
   text: {
     marginBottom: 10,
@@ -16,10 +15,5 @@ export const styles = StyleSheet.create({
   input: {
     color: '#fff',
     fontSize: 18,
-  },
-  button: {
-    // width: '100%',
-    marginBottom: 10,
-    backgroundColor: '#fe3',
   },
 });

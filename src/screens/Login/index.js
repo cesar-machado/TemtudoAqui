@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { Button, Input } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -14,6 +14,10 @@ export default function Login({ navigation }) {
       index: 0,
       routes: [{ name: 'Main' }],
     });
+  };
+
+  const cadastrar = () => {
+    navigation.navigate('Register');
   };
 
   return (
@@ -37,9 +41,18 @@ export default function Login({ navigation }) {
       />
 
       <Button
-        icon={<Icon name='check' size={20} color='white' />}
+        style={styles.button}
+        icon={<Icon name='check' size={40} color='white' />}
         title='Entrar'
+        buttonStyle={styles.button}
         onPress={() => entrar()}
+      />
+
+      <Button
+        icon={<Icon name='user' size={40} color='white' />}
+        title='Cadastrar'
+        buttonStyle={styles.button}
+        onPress={() => cadastrar()}
       />
     </View>
   );
